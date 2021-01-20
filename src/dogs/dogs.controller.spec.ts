@@ -15,7 +15,7 @@ describe('DogsController', () => {
   describe('findAll', () => {
     it('should return an array of dogs', async () => {
       const dogBucket = new CreateDogDto();
-      const result = [dogBucket];
+      const result = [dogBucket];  
       jest.spyOn(dogsService, 'findAll').mockImplementation(() => result);
 
       expect(await dogsController.findAll()).toBe(result);

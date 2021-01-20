@@ -1,4 +1,6 @@
-export class CreateOwlDto {
+import { Owl } from "../interfaces/Owl.interface";
+
+export class CreateOwlDto implements Owl{
     id: number;
     name: string;
     age: number;

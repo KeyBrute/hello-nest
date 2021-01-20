@@ -1,4 +1,6 @@
-export class CreateRacoonDto {
+import { Racoon } from "../interfaces/racoon.interface";
+
+export class CreateRacoonDto implements Racoon {
     id: number;
     name: string;
     age: number;

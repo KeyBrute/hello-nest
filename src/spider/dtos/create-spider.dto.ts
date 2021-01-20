@@ -1,4 +1,6 @@
-export class CreateSpiderDto {
+import { Spider } from "../interfaces/spider.interface";
+
+export class CreateSpiderDto implements Spider {
     id: number;
     name: string;
     age: number;

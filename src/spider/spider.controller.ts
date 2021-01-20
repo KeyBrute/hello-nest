@@ -1,5 +1,5 @@
 import { Controller, Get, Query, Post, Body, Put, Param, Delete } from '@nestjs/common';
-import { CreateSpiderDto, UpdateSpiderDto } from './dto/create-spider.dto';
+import { CreateSpiderDto, UpdateSpiderDto } from './dtos/create-spider.dto';
 import { SpidersService } from './spider.service';
 import { Spider } from './interfaces/spider.interface';
 

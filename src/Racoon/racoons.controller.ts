@@ -1,4 +1,4 @@
-import { Controller, Get, Query, Post, Body, Put, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Query, Post, Body, Put, Param, Delete, ParseIntPipe } from '@nestjs/common';
 import { CreateRacoonDto, UpdateRacoonDto } from './dtos/create-racoon.dto';
 import { RacoonsService } from './racoons.service';
 import { Racoon } from './interfaces/racoon.interface';
@@ -14,7 +14,7 @@ export class RacoonController {
     }
 
     @Get(':id')
-    findOne(@Param('id') id: number) {
+    findOne(@Param('id', ParseIntPipe) id: number) {
         this.racoonsService.find(id);
     }
 
